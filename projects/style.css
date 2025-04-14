@@ -6,15 +6,18 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  outline: none; border: none;
-  text-transform:capitalize;
+  outline: none; 
+  border: none;
+  text-transform: capitalize;
   transition: all .2s linear;
 }
+
 html{
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+
 body{
   background: #f7f7f7;
   font-family: 'Poppins', sans-serif;
@@ -25,10 +28,6 @@ body{
   color: #fff;
 }
 
-html{
-  font-size: 62.5%;
-  overflow-x: hidden;
-}
 html::-webkit-scrollbar{
   width: .8rem;
 }
@@ -54,7 +53,7 @@ header{
 }
 section{
   min-height: 100vh;
-  padding: 2rem 9%;
+  padding: 2rem 5%; /* reduced padding */
 }
 .heading{
   font-size: 3.5rem;
@@ -110,7 +109,7 @@ header .navbar ul li a:hover{
 }
 @media(max-width:768px){
   #menu{
-      display: block;
+    display: block;
   }
   header .navbar{
     position: fixed;
@@ -157,7 +156,6 @@ header .navbar ul li a:hover{
 
 /* work section starts */
 .work{
-  /* background: #010124; */
   background: linear-gradient(to bottom, #010136, #00003a);
   margin-top: 5rem;
 }
@@ -171,9 +169,10 @@ header .navbar ul li a:hover{
 .work .button-group{
   display: flex;
   flex-wrap: wrap;
-  gap:1rem;
+  gap: 1rem;
   margin: 2rem auto;
-  width: 50%;
+  width: 100%; /* was 50% */
+  max-width: 600px; /* new */
   justify-content: center;
   align-items: center;
 }
@@ -198,32 +197,34 @@ header .navbar ul li a:hover{
 .work .box-container{
   display: flex;
   flex-wrap: wrap;
-  gap:1.5rem;
-  margin: 2rem;
+  gap: 1rem; /* was 1.5rem */
+  margin: 1rem; /* was 2rem */
+  justify-content: center; /* new */
 }
 .work .box-container .box{
-  flex:1 1 30rem;
+  flex: 1 1 25rem; /* was 30rem */
   border-radius: .5rem;
   box-shadow: 0 .7rem 1rem rgba(0,0,0,.3);
   position: relative;
-  overflow:hidden;
-  height:30rem;
+  overflow: hidden;
+  height: 30rem;
   background: #fff;
   border: none;
 }
 .work .box-container .box img{
   height: 100%;
-  width:100%;
+  width: 100%;
   object-fit: cover;
 }
 .work .box-container .box .content{
   height: 100%;
-  width:100%;
+  width: 100%;
   position: absolute;
-  top:85%; left:0;
-  background:rgba(255, 255, 255, 0.9);
+  top: 85%; left: 0;
+  background: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
+  transition: top 0.4s ease-in-out; /* new */
 }
 .work .box-container .box .content .tag{
   display: flex;
@@ -332,7 +333,6 @@ header .navbar ul li a:hover{
   }
 }
 /* common media queries ends*/
-
 
 /* scroll top starts */
 #scroll-top{
